@@ -345,3 +345,40 @@ body {
   padding: 1rem;
   transition: background 0.3s, border 0.3s;
 }
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient-move {
+  animation: gradient-move 4s ease infinite;
+}
+
+/* Gradient border utility */
+.gradient-border {
+  border: 2px solid transparent;
+  background-image: linear-gradient(#000000aa, #000000aa),
+    linear-gradient(90deg, #ff0080, #ff8c00, #ff2d00);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  animation: borderMove 6s linear infinite;
+}
+
+@keyframes borderMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
