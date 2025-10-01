@@ -345,37 +345,3 @@ body {
   padding: 1rem;
   transition: background 0.3s, border 0.3s;
 }
-/* Dark / Light Theme */
-.theme-dark {
-  background: #0b0b0b;
-  color: #f5f5f5;
-}
-.theme-light {
-  background: #ffffff;
-  color: #111;
-}
-
-/* Accent Gradient applied globally */
-:root {
-  --grad: linear-gradient(to right, #ff6a00, #ee0979); /* default orange */
-}
-
-/* Card style */
-.card {
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.3s ease;
-}
-.theme-light .card {
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-/* Gradient text */
-.gradient-text {
-  background: var(--grad);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
