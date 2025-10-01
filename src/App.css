@@ -1,0 +1,83 @@
+/* Base Fire-Themed Background */
+.bg-dark {
+  background: radial-gradient(circle at top, #1a0000 0%, #240000 100%);
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  position: relative;
+  color: white;
+}
+
+/* Fire Particles Background */
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0; left: 0;
+  pointer-events: none;
+  background: url("https://i.ibb.co/7z8Kf4r/fire-particles.png") repeat;
+  animation: moveParticles 20s linear infinite;
+  opacity: 0.2;
+}
+@keyframes moveParticles {
+  from { background-position: 0 0; }
+  to { background-position: 1000px 1000px; }
+}
+
+/* Fire Logo Animation */
+.fire-logo {
+  filter: drop-shadow(0 0 12px #ff6b00) drop-shadow(0 0 20px #ff3d00);
+  animation: flicker 1.5s infinite;
+}
+@keyframes flicker {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.05) rotate(2deg); }
+}
+
+/* Gradient Title Text */
+.gradient-text {
+  background: linear-gradient(90deg, #ff6b00, #ff1a00, #ff9c00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glowText 2s ease-in-out infinite alternate;
+}
+@keyframes glowText {
+  0% { text-shadow: 0 0 10px #ff6b00; }
+  100% { text-shadow: 0 0 25px #ff1a00; }
+}
+
+/* Buttons */
+button {
+  transition: all 0.3s ease;
+}
+button:hover {
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* Fade for Quotes */
+@keyframes fade {
+  0%, 100% { opacity: 0; }
+  20%, 80% { opacity: 1; }
+}
+.animate-fade {
+  animation: fade 4s infinite;
+}
+/* 🎬 Fade + Zoom animation */
+@keyframes fadeZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.fade-zoom {
+  animation: fadeZoom 1.6s ease forwards;
+}
